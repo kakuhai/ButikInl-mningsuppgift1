@@ -96,42 +96,42 @@ namespace ShirtsAndMugs
             this.Price = price;
         }
     }
-    class Merch : IComparable<Merch>
+    class Mugs : IComparable<Mugs>
     {
-        public static List<Merch> MugsListCreate()
+        public static List<Mugs> MugsListCreate()
         {
-            List<Merch> MugsList = new List<Merch>
+            List<Mugs> MugsList = new List<Mugs>
             {
-                new Merch("Stockholm", 3.7, 149),
-                new Merch("Uppsala", 4.5, 149),
-                new Merch("Göteborg", 4.2, 129),
-                new Merch("Malmö", 3.4, 149),
-                new Merch("Upplands Väsby", 2.8, 99),
-                new Merch("Västerås", 4.0, 129),
-                new Merch("Örebro", 4.5, 149),
-                new Merch("Linköping", 3.4, 129),
-                new Merch("Helsingborg", 3.2, 99),
-                new Merch("Jönköping", 4.4, 129),
-                new Merch("Norrköping", 0.0, 99),
-                new Merch("Lund", 4.7,149),
-                new Merch("Umeå", 3.0,149),
-                new Merch("Gävle", 2.6,99),
-                new Merch("Borås", 4.2,129),
-                new Merch("Södertälje", 3.1,99),
-                new Merch("Eskilstuna", 5.0,149),
-                new Merch("Halmstad", 4.9,99),
-                new Merch("Växjö", 2.2,129),
-                new Merch("Karlstad", 3.6,129),
-                new Merch("Sundsvall", 3.6,99),
-                new Merch("Östersund", 3.2,149),
-                new Merch("Trollhättan", 4.3,149),
-                new Merch("Nordöstra Göteborg", 3.9,149),
-                new Merch("Luleå", 2.0,99),
-                new Merch("Lidingö", 1.2,99),
-                new Merch("Borlänge", 3.3,129),
-                new Merch("Tumba", 4.4,99),
-                new Merch("Kristianstad", 5.0,149),
-                new Merch("Kalmar", 2.8,149),
+                new Mugs("Stockholm", 3.7, 149),
+                new Mugs("Uppsala", 4.5, 149),
+                new Mugs("Göteborg", 4.2, 129),
+                new Mugs("Malmö", 3.4, 149),
+                new Mugs("Upplands Väsby", 2.8, 99),
+                new Mugs("Västerås", 4.0, 129),
+                new Mugs("Örebro", 4.5, 149),
+                new Mugs("Linköping", 3.4, 129),
+                new Mugs("Helsingborg", 3.2, 99),
+                new Mugs("Jönköping", 4.4, 129),
+                new Mugs("Norrköping", 0.0, 99),
+                new Mugs("Lund", 4.7,149),
+                new Mugs("Umeå", 3.0,149),
+                new Mugs("Gävle", 2.6,99),
+                new Mugs("Borås", 4.2,129),
+                new Mugs("Södertälje", 3.1,99),
+                new Mugs("Eskilstuna", 5.0,149),
+                new Mugs("Halmstad", 4.9,99),
+                new Mugs("Växjö", 2.2,129),
+                new Mugs("Karlstad", 3.6,129),
+                new Mugs("Sundsvall", 3.6,99),
+                new Mugs("Östersund", 3.2,149),
+                new Mugs("Trollhättan", 4.3,149),
+                new Mugs("Nordöstra Göteborg", 3.9,149),
+                new Mugs("Luleå", 2.0,99),
+                new Mugs("Lidingö", 1.2,99),
+                new Mugs("Borlänge", 3.3,129),
+                new Mugs("Tumba", 4.4,99),
+                new Mugs("Kristianstad", 5.0,149),
+                new Mugs("Kalmar", 2.8,149),
 
             };
             return MugsList;
@@ -140,7 +140,7 @@ namespace ShirtsAndMugs
         {
             var mugs = MugsListCreate();
             mugs.Sort();
-            foreach (Merch Mugs in mugs)
+            foreach (Mugs Mugs in mugs)
             {
                 Console.WriteLine(Mugs.Design + " " + Mugs.UserRating + " " + Mugs.Price + ":-");
             }
@@ -150,7 +150,7 @@ namespace ShirtsAndMugs
             var mugs = MugsListCreate();
             mugs.Sort();
             mugs.Reverse();
-            foreach (Merch Mugs in mugs)
+            foreach (Mugs Mugs in mugs)
             {
                 Console.WriteLine(Mugs.Design + " " + Mugs.UserRating + " " + Mugs.Price + ":-");
             }
@@ -158,7 +158,7 @@ namespace ShirtsAndMugs
         public string Design { get; set; }
         public double UserRating { get; set; }
         public int Price { get; set; }
-        public int CompareTo(Merch other)
+        public int CompareTo(Mugs other)
         {
             if (UserRating > other.UserRating)
             {
@@ -173,7 +173,7 @@ namespace ShirtsAndMugs
                 return 0;
             }
         }
-        public Merch(string design, double userRating, int price)
+        public Mugs(string design, double userRating, int price)
         {
             Design = design;
             UserRating = userRating;
